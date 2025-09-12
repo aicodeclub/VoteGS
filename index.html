@@ -55,7 +55,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ScaleGS: Scalable Distributed 3D Gaussian Splatting with \(O(1)\) Cross-GPU Communication</h1>
+          <h1 class="title is-1 publication-title">VoteGS: Large-Scale 3D Gaussian Splatting Pruning via Neighbor Voting</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block" >
               <span style="color: deepskyblue;">Anonymous Authors</span>
@@ -122,7 +122,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle  has-text-left">
-      ScaleGS (Ours) achieves perfect rendering capability on the large-scale MatrixCity dataset (5621 images, 1920×1080 resolution) under distributed training using 8 Tesla P40 GPUs and a batch size of 4.
+      
       </h2>
     </div>
   </div>
@@ -139,7 +139,7 @@
 
       <!-- Caption -->
       <h2 class="subtitle  has-text-left"  style="max-width: 70%; margin: 0 auto; padding-left: 2em;">
-        On the large-scale MatrixCity and high-resolution Rubble scenes, ScaleGS (Ours) outperforms the state-of-the-art method in performance. We theoretically prove that our framework can achieve \(O(1)\) cross-GPU communication complexity for nearly all GPUs in typical scenes.
+      
       </h2>
       
     </div>
@@ -156,7 +156,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified" style="font-size: 1.3em;">
           <p>
-          3D Gaussian Splatting (3DGS) has recently demonstrated outstanding performance in 3D reconstruction. However, its scalability to large scenes remains limited by single-GPU memory constraints. We propose ScaleGS, a scalable distributed training framework for large-scale 3DGS with constant-degree cross-GPU communication. (1) We first present a median-guided binary partitioning algorithm and pixel-tile parallelism to reduce memory pressure on a single GPU. To address the boundary artifacts caused by partitioning, we introduce an autonomous partition growth mechanism that maintains global Gaussian uniqueness and cross-GPU parameter synchronization. (2) To resolve the scalability challenges, we design a greedy GPU-Tile remapping strategy based on pixel-tile parallelism to achieve \(O(1)\) cross-GPU communication complexity for nearly all GPUs in representative scenes. (3) Our framework finally introduces adaptive load balancing that periodically monitors workloads and efficiently migrates Gaussians between neighboring GPUs with negligible overhead. Evaluations show that ScaleGS outperforms state-of-the-art methods, achieving up to 20% faster training and approximately 20% model size reduction on 8 Tesla P40 GPUs without compromising reconstruction quality. 
+         
           </p>
         </div>
       </div>
@@ -196,10 +196,7 @@
 
       <!-- Caption -->
       <h2 class="subtitle mt-3  has-text-left"  style="max-width: 90%; margin: 0 auto; padding-left: 2em;">
-On the high-resolution Rubble scene, our method achieves a 20% reduction in training time compared to state-of-the-art approaches, while
-preserving high rendering fidelity. Although constrained by current hardware resources, we are unable to empirically validate the full extent
-of scalability. Nonetheless, our analysis demonstrates that the training efficiency of the proposed framework is theoretically independent of
-the number of GPUs, implying that its advantages are expected to scale favorably with increased computational capacity.
+
       </h2>
 
     </div>
@@ -216,8 +213,7 @@ the number of GPUs, implying that its advantages are expected to scale favorably
       <img src="static/images/merge.png" alt="Merged City Reconstruction"  style="max-width: 95%; height: auto;padding-left: 2em;" />
       <!-- Caption -->
       <h2 class="subtitle mt-3  has-text-left"  style="max-width: 95%; margin: 0 auto; padding-left: 2em;">
-        (a) The entire scene is divided into eight subregions, each processed by a different GPU. We render each GPU’s trained model as a separate image, showing that each subregion is contiguous, and there are no overlapping regions.
-        (b) Merging and rendering the eight models without any post-processing produces a complete scene with no boundary artifacts.
+
       </h2>
       
     </div>
@@ -228,10 +224,8 @@ the number of GPUs, implying that its advantages are expected to scale favorably
 
 
 
-
+<!--
 <div style="margin: 30px 0;"></div>
-<!--End paper poster -->
-<!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-centered has-text-centered">
@@ -239,7 +233,6 @@ the number of GPUs, implying that its advantages are expected to scale favorably
     
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
             <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
@@ -249,7 +242,6 @@ the number of GPUs, implying that its advantages are expected to scale favorably
 	<div style="margin: 20px 0;"></div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
             <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
@@ -259,7 +251,6 @@ the number of GPUs, implying that its advantages are expected to scale favorably
 	<div style="margin: 20px 0;"></div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
             <source src="static/videos/rubble1.mp4"
             type="video/mp4">
           </video>
@@ -269,7 +260,6 @@ the number of GPUs, implying that its advantages are expected to scale favorably
 	<div style="margin: 20px 0;"></div>
         <div class="item item-video4">
           <video poster="" id="video4" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
             <source src="static/videos/rubble3.mp4"
             type="video/mp4">
           </video>   
@@ -279,8 +269,7 @@ the number of GPUs, implying that its advantages are expected to scale favorably
     </div>
   </div>
 </section>
-<!-- End video carousel -->
-
+-->
 
 
 <!--BibTex citation -->
