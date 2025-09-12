@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ScaleGS</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+    <!-- MathJax -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</head>
+<body>
+
+
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ScaleGS: Scalable Distributed 3D Gaussian Splatting with \(O(1)\) Cross-GPU Communication</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" >
+              <span style="color: deepskyblue;">Anonymous Authors</span>
+          
+          </div>
+
+        
+                    <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+            </div>
+          </div>
+                <span class="author-block">
+                The code will be released soon.
+              </span>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle  has-text-left">
+      ScaleGS (Ours) achieves perfect rendering capability on the large-scale MatrixCity dataset (5621 images, 1920×1080 resolution) under distributed training using 8 Tesla P40 GPUs and a batch size of 4.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Single image section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      
+      <!-- Image -->
+      <img src="static/images/2x2.png" alt="Merged City Reconstruction"  style="max-width: 70%; height: auto;" />
+
+      <!-- Caption -->
+      <h2 class="subtitle  has-text-left"  style="max-width: 70%; margin: 0 auto; padding-left: 2em;">
+        On the large-scale MatrixCity and high-resolution Rubble scenes, ScaleGS (Ours) outperforms the state-of-the-art method in performance. We theoretically prove that our framework can achieve \(O(1)\) cross-GPU communication complexity for nearly all GPUs in typical scenes.
+      </h2>
+      
+    </div>
+  </div>
+</section>
+
+
+<div style="margin: 30px 0;"></div>
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified" style="font-size: 1.3em;">
+          <p>
+          3D Gaussian Splatting (3DGS) has recently demonstrated outstanding performance in 3D reconstruction. However, its scalability to large scenes remains limited by single-GPU memory constraints. We propose ScaleGS, a scalable distributed training framework for large-scale 3DGS with constant-degree cross-GPU communication. (1) We first present a median-guided binary partitioning algorithm and pixel-tile parallelism to reduce memory pressure on a single GPU. To address the boundary artifacts caused by partitioning, we introduce an autonomous partition growth mechanism that maintains global Gaussian uniqueness and cross-GPU parameter synchronization. (2) To resolve the scalability challenges, we design a greedy GPU-Tile remapping strategy based on pixel-tile parallelism to achieve \(O(1)\) cross-GPU communication complexity for nearly all GPUs in representative scenes. (3) Our framework finally introduces adaptive load balancing that periodically monitors workloads and efficiently migrates Gaussians between neighboring GPUs with negligible overhead. Evaluations show that ScaleGS outperforms state-of-the-art methods, achieving up to 20% faster training and approximately 20% model size reduction on 8 Tesla P40 GPUs without compromising reconstruction quality. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+  <div style="margin: 30px 0;"></div>
+  <section class="hero is-small">
+  <div class="hero-body">
+   <h2 class="title is-3 has-text-centered">Performance Evaluation</h2>
+    <div class="container has-text-centered">
+
+      <!-- Flex 容器 -->
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;      /* 两图间距 */
+          flex-wrap: wrap;/* 窄屏时自动换行 */
+        "
+      >
+        <img
+          src="static/images/2x4.png"
+          alt="Merged City Reconstruction 1"
+          style="max-width:90%; height:auto;padding-left: 2em;"
+        />
+	<div style="margin: 10px 0;"></div>
+        <img
+          src="static/images/3x5.png"
+          alt="Merged City Reconstruction 2"
+          style="max-width:90%; height:auto;"
+        />
+      </div>
+
+      <!-- Caption -->
+      <h2 class="subtitle mt-3  has-text-left"  style="max-width: 90%; margin: 0 auto; padding-left: 2em;">
+On the high-resolution Rubble scene, our method achieves a 20% reduction in training time compared to state-of-the-art approaches, while
+preserving high rendering fidelity. Although constrained by current hardware resources, we are unable to empirically validate the full extent
+of scalability. Nonetheless, our analysis demonstrates that the training efficiency of the proposed framework is theoretically independent of
+the number of GPUs, implying that its advantages are expected to scale favorably with increased computational capacity.
+      </h2>
+
+    </div>
+  </div>
+</section>
+
+<div style="margin: 30px 0;"></div>
+<!-- Single image section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+    <h2 class="title is-3">Boundary-Artifact-Free</h2>
+      <!-- Image -->
+      <img src="static/images/merge.png" alt="Merged City Reconstruction"  style="max-width: 95%; height: auto;padding-left: 2em;" />
+      <!-- Caption -->
+      <h2 class="subtitle mt-3  has-text-left"  style="max-width: 95%; margin: 0 auto; padding-left: 2em;">
+        (a) The entire scene is divided into eight subregions, each processed by a different GPU. We render each GPU’s trained model as a separate image, showing that each subregion is contiguous, and there are no overlapping regions.
+        (b) Merging and rendering the eight models without any post-processing produces a complete scene with no boundary artifacts.
+      </h2>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<div style="margin: 30px 0;"></div>
+<!--End paper poster -->
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-centered has-text-centered">
+      <h2 class="title is-3">More Experiments</h2>
+    
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+      </div>
+      <h2 class="subtitle has-text-centered">1. ScaleGS rendering demonstration on the MatrixCity dataset.</h2> 
+   
+	<div style="margin: 20px 0;"></div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      <h2 class="subtitle has-text-centered">2. ScaleGS rendering demonstration on the MatrixCity dataset.</h2> 
+        
+	<div style="margin: 20px 0;"></div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/rubble1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      <h2 class="subtitle has-text-centered">3. ScaleGS rendering demonstration on the 4K Rubble dataset.</h2>
+	  
+	<div style="margin: 20px 0;"></div>
+        <div class="item item-video4">
+          <video poster="" id="video4" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/rubble3.mp4"
+            type="video/mp4">
+          </video>   
+      </div>
+      <h2 class="subtitle has-text-centered">4. ScaleGS rendering demonstration on the 4K Rubble dataset.</h2>
+	  
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center;">
+            We thank the authors of <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a> for providing the website template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
