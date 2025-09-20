@@ -176,33 +176,37 @@
   <div style="margin: 30px 0;"></div>
   <section class="hero is-small">
   <div class="hero-body">
-   <h2 class="title is-3 has-text-centered">Performance Evaluation</h2>
+   <h2 class="title is-3 has-text-centered">Performance Comparison</h2>
     <div class="container has-text-centered">
 
-    
+      <!-- Flex 容器 -->
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;      /* 两图间距 */
+          flex-wrap: wrap;/* 窄屏时自动换行 */
+        "
+      >
+        <img
+          src="static/images/2x3.png"
+          alt="Merged City Reconstruction 1"
+          style="max-width:90%; height:auto;padding-left: 2em;"
+        />
+	<div style="margin: 10px 0;"></div>
+        <img
+          src="static/images/3x3.png"
+          alt="Merged City Reconstruction 2"
+          style="max-width:88%; height:auto;"
+        />
+      </div>
 
       <!-- Caption -->
       <h2 class="subtitle mt-3  has-text-left"  style="max-width: 90%; margin: 0 auto; padding-left: 2em;">
-
+      VoteGS achieves 5× compression ratio while preserving high rendering quality.
       </h2>
 
-    </div>
-  </div>
-</section>
-
-<div style="margin: 30px 0;"></div>
-<!-- Single image section -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-    <h2 class="title is-3"></h2>
-      <!-- Image -->
-   
-      <!-- Caption -->
-      <h2 class="subtitle mt-3  has-text-left"  style="max-width: 95%; margin: 0 auto; padding-left: 2em;">
-
-      </h2>
-      
     </div>
   </div>
 </section>
