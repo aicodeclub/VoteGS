@@ -163,7 +163,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified" style="font-size: 1.3em;">
           <p>
-         
+         Recent pruning methods for 3D Gaussian Splatting (3DGS) focus on eliminating redundant Gaussians to enhance efficiency, but suffer from issues such as neglected spatial dependencies, limited large-scale scene support, and poor generalization. To address these, we propose VoteGS, a novel pruning framework for large-scale 3DGS. (1) We design a neighbor voting mechanism and Gaussian merging process. The former computes each Gaussian’s existence probability by integrating spatial distance, rendering contribution, temporal decay, multi-view visibility, and spherical harmonics strength, while the latter merges low-probability Gaussians based on similarity to enhance rendering quality. (2) We employ multi-GPU parallelism for large-scale scenes and cross-GPU probability synchronization to address incomplete probability estimates for boundary Gaussians in distributed training. (3) Our method adopts PSNR-based feedback to adaptively adjust pruning intensity, ensuring stable pruning effects in diverse scenes. Extensive experiments show that VoteGS achieves up to 5× compression in model size and up to 60% reduction in GPU memory during training while maintaining rendering quality, regardless of scene scale.
           </p>
         </div>
       </div>
