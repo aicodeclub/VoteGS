@@ -45,19 +45,18 @@
     <!-- MathJax -->
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<style>
-  :root { --h: 300px; }         /* 想要的统一高度，改这里即可 */
-  .row { display: flex; gap: 12px; }
-  figure { flex: 1; margin: 0; }
-  .imgbox { height: var(--h); overflow: hidden; }
-  .imgbox > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;          /* 居中裁剪，保证等高 */
-    display: block;
-  }
-  figcaption { text-align: center; margin-top: 6px; font-size: 14px; color: #555; }
-</style>
+	<style>
+	  .row { display:flex; gap:12px; align-items:flex-start; }
+	  figure { flex:1; margin:0; }
+	  /* 设定统一纵横比，按需改 16/9 或 4/3 */
+	  .frame { width:100%; aspect-ratio: 16 / 9; }
+	  .frame > img {
+	    width:100%; height:100%;
+	    object-fit: cover;      /* 填满并裁剪；若不要裁剪改为 contain */
+	    display:block;
+	  }
+	  figcaption { text-align:center; margin-top:6px; font-size:14px; color:#555; }
+	</style>
 
 </head>
 <body>
@@ -224,22 +223,23 @@
   </div>
 </section>
 
-	
 <div class="row">
   <figure>
-    <div class="imgbox">
+    <div class="frame">
       <img src="static/images/truck.png" alt="图1描述">
     </div>
     <figcaption>图1说明文字</figcaption>
   </figure>
   <figure>
-    <div class="imgbox">
+    <div class="frame">
       <img src="static/images/playroom.png" alt="图2描述">
     </div>
     <figcaption>图2说明文字</figcaption>
   </figure>
 </div>
 
+
+	
 <!--
 <div style="margin: 30px 0;"></div>
 <section class="hero is-small">
