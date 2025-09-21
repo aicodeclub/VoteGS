@@ -48,20 +48,16 @@
  <style>
   .container { width: min(92vw, 1200px); margin: 2rem auto; }
   .row { display: flex; gap: 12px; }
-  figure { flex: 1; margin: 0; }
-  .frame { width: 100%; aspect-ratio: 16 / 9; }
-  .frame > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* 或 contain */
-    display: block;
-  }
-  figcaption {
-    text-align: center;
-    margin-top: 6px;
-    font-size: clamp(12px, 1.6vw, 16px);
-    color: #555;
-  }
+	.grid2x2{
+	    display:grid;
+	    grid-template-columns: repeat(2, 1fr); /* 两列 */
+	    column-gap:12px;   /* 左右间隔 */
+	    row-gap:16px;      /* 上下间隔（你要的“纵向间隔”）*/
+	  }
+	  figure{margin:0}
+	  .frame{width:100%;aspect-ratio:16/9}
+	  .frame>img{width:100%;height:100%;object-fit:cover;display:block}
+	  figcaption{text-align:center;margin-top:6px;font-size:14px;color:#555}
 </style>
 
 </head>
@@ -246,8 +242,6 @@
       <figcaption>图2说明文字</figcaption>
     </figure>
   </div>
-	
-  <br><br>
 	
   <div class="row">
     <figure>
